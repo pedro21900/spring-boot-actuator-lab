@@ -1,0 +1,7 @@
+- Parametros para usar no código java scrip usando spring boot
+
+A @RestControlleranotação informa ao Spring que este código descreve um endpoint que deve ser disponibilizado na web. 
+O @GetMapping(“/hello”)diz ao Spring para usar nosso hello()método para responder a solicitações enviadas para o http://localhost:8080/helloendereço.
+ @RequestParamestá dizendo ao Spring para esperar um namevalor na solicitação, mas se não estiver lá, ele usará a palavra “World” por padrão.
+
+
