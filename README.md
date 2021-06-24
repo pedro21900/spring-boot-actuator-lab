@@ -72,7 +72,7 @@ no terminal execute o comando `java -jar target/spring-boot-actuator-lab-0.0.1-S
 ##### 5.3.2 `sudo docker run -p 8080:8080 spring-boot-actuator-lab`
 
 ----
-Vá em um navegador de sua escolhe e acesse localhost:8080/actuador para vizualizar as metricas
+Vá em um navegador de sua escolhe e acesse localhost:8080/actuador para vizualizar as metricas login:foo e senha:foo
 
 ## Troubleshoot
 

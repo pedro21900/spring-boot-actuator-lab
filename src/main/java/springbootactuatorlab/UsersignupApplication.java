@@ -5,6 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import springbootactuatorlab.domain.User;
+import springbootactuatorlab.repository.UserRepository;
+import springbootactuatorlab.rest.UserController;
+
 /**
  * @author Pratik Das
  * @ca-autor Pedro Lenonn
@@ -25,13 +29,14 @@ public class UsersignupApplication {
 	@Bean
 	InitializingBean populateUsers() {
 		return () -> {
-			userRepository.deleteAll();
-			userRepository.save(User.builder().id(0).Name("User").Password("123456").build());
-			userRepository.save(User.builder().id(1).Name("User").Password("123456").build());
-			userRepository.save(User.builder().id(2).Name("User").Password("123456").build());
-			userRepository.save(User.builder().id(3).Name("User").Password("123456").build());
-			userRepository.save(User.builder().id(4).Name("User").Password("123456").build());
-			//userController.addUser(User.builder().id(0));
+			//userRepository.deleteAll();
+			userRepository.save(User.builder().id("0").Name("User").Password("123456").build());
+
+			userRepository.save(User.builder().id("1").Name("User").Password("123456").build());
+
+			userRepository.deleteById("1");//deleta por indice
+			//userController.addUser(User.builder().id(0).Name("User").Password("123456").build());
+			//userController.activateUser(User.builder().id(0).Name("User").Password("123456").build());
 		};
 	}
 }
