@@ -18,7 +18,7 @@ RUN addgroup -S spring && adduser -S spring -G spring
 
 USER spring:spring
 
-COPY --from=builder target/*.jar spring-boot-actuator-lab-0.0.1-SNAPSHOT.jar
+COPY --from=builder /home/spring-boot-actuator-lab/target/*.jar spring-boot-actuator-lab-0.0.1-SNAPSHOT.jar
 
 EXPOSE 8080
 
