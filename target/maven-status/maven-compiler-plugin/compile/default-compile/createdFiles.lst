@@ -1,4 +1,3 @@
-springbootactuatorlab/core/URLHelper.class
 springbootactuatorlab/core/FetchUsersAPIHealthContributor.class
 springbootactuatorlab/domain/User.class
 springbootactuatorlab/core/AuditLogin.class
