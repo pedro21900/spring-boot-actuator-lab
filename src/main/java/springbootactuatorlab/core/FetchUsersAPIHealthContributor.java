@@ -31,12 +31,12 @@ public class FetchUsersAPIHealthContributor
 		super();
 		// First check if URL shortener service is reachable with
 		// Health Indicator of URL shortener service
-		contributors.put("urlShortener", 
-				urlShortenerServiceHealthContributor);
+		//contributors.put("urlShortener",
+				//urlShortenerServiceHealthContributor);
 		// Check if USERS table used in the API can be queried with 
 		//Health Indicator of Database
-		contributors.put("database", 
-				databaseHealthContributor);
+		//contributors.put("database",
+				//databaseHealthContributor);
 	}
 
 	/**
