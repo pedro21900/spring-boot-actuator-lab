@@ -46,7 +46,7 @@ a ação acime gera o executável da aplicação
 
 ----
 
-4 #### Executando Aplicação 
+4. #### Executando Aplicação 
 
 É possível rodar a aplicação de 4 formas
 
