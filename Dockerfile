@@ -1,10 +1,24 @@
+FROM reg.tre-pa.jus.br/library/maven:3.6-jdk-8 AS builder
+
+RUN mkdir -p ./home/spring-boot-actuator-lab
+
+#WORKDIR /home/.m2
+
+#COPY .m2 .
+
+WORKDIR /home/spring-boot-actuator-lab
+
+COPY / .
+#-s ~/.m2/settings@trepa.xml
+RUN mvn clean package
+
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 RUN addgroup -S spring && adduser -S spring -G spring
 
 USER spring:spring
 
-COPY target/*.jar spring-boot-actuator-lab-0.0.1-SNAPSHOT.jar
+COPY --from=builder target/*.jar spring-boot-actuator-lab-0.0.1-SNAPSHOT.jar
 
 EXPOSE 8080
 
