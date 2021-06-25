@@ -25,14 +25,14 @@ public class User {
 	@Id
 	private String id;
 	private String Name;
-	private String Password;
+	private String Equipe;
 
 
-	public User(String id, String Name, String Password) {
+	public User(String id, String Name, String Equipe) {
 		super();
 		this.id = id;
 		this.Name = Name;
-		this.Password = Password;
+		this.Equipe = Equipe;
 	}
 	
 

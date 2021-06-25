@@ -30,11 +30,11 @@ public class UsersignupApplication {
 	InitializingBean populateUsers() {
 		return () -> {
 			//userRepository.deleteAll();
-			userRepository.save(User.builder().id("0").Name("User").Password("123456").build());
+			userRepository.save(User.builder().id("0").Name("User").Equipe("SDS").build());
 
-			userRepository.save(User.builder().id("1").Name("User").Password("123456").build());
+			userRepository.save(User.builder().id("1").Name("User").Equipe("SDIN").build());
 
-			userRepository.deleteById("1");//deleta por indice
+			//userRepository.deleteById("1");//deleta por indice
 			//userController.addUser(User.builder().id(0).Name("User").Password("123456").build());
 			//userController.activateUser(User.builder().id(0).Name("User").Password("123456").build());
 		};

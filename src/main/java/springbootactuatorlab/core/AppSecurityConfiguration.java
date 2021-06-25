@@ -18,6 +18,7 @@ public class AppSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/actuator/**").permitAll()
+                .antMatchers("/auditevents/**").permitAll()
                 .antMatchers("/users").hasAnyRole("USER","ADMIN")
                 .antMatchers("/login").permitAll()
                 .antMatchers("/").hasAnyRole("USER","ADMIN")
