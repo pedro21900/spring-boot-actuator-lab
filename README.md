@@ -59,7 +59,7 @@ Na raiz do projeto digitar:
 
 no terminal execute o comando `mvn spring-boot:run`
 
-##### 5.2 Em Java (Localmente)
+##### 5.2 Em Java (Localmente)7
 
 no terminal execute o comando `java -jar target/spring-boot-actuator-lab-0.0.1-SNAPSHOT.jar`
 
