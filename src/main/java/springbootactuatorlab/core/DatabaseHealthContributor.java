@@ -25,7 +25,8 @@ public class DatabaseHealthContributor implements HealthIndicator, HealthContrib
 	public Health health() {
 		try(Connection conn = ds.getConnection();){
 			Statement stmt = conn.createStatement();
-			stmt.execute("select id,Name,Password from USERS");
+			  stmt.execute("SELECT 1 FROM DUAL");
+            stmt.execute("SELECT dummy FROM DUAL");
 		} catch (SQLException ex) {
 			return Health.outOfService().withException(ex).build();
 		}
